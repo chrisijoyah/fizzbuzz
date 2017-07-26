@@ -86,6 +86,7 @@ class Step1
             $this->output[] = $i;
         }
 
+        // Return the output
         return $this->output;
     }
 

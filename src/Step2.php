@@ -1,58 +1,8 @@
 <?php
 namespace FizzBuzz;
 
-class Step2
+class Step2 extends Step1
 {
-
-    /**
-     * Stores output.
-     *
-     * @var string
-     */
-    public $output = [];
-
-    /**
-     * Output 'fizz' for numbers that
-     * are multiples of 3.
-     *
-     * @param $integer
-     * @return string
-     */
-    public function outputFizzForMultiplesOf3($integer)
-    {
-        if ($integer % 3 === 0) {
-            return 'fizz';
-        }
-    }
-
-    /**
-     * Output 'buzz' for numbers that
-     * are multiples of 5.
-     *
-     * @param $integer
-     * @return string
-     */
-    public function outputBuzzForMultiplesOf5($integer)
-    {
-        if ($integer % 5 === 0) {
-            return 'buzz';
-        }
-    }
-
-    /**
-     * Output 'fizzbuzz' for numbers that
-     * are multiples of 15.
-     *
-     * @param $integer
-     * @return string
-     */
-    public function outputFizzBuzzForMultiplesOf15($integer)
-    {
-        if ($integer % 15 === 0) {
-            return 'fizzbuzz';
-        }
-    }
-
     /**
      * Output 'lucky' for numbers
      * containing 3.
@@ -106,16 +56,8 @@ class Step2
             // Output number id none of the conditions are met.
             $this->output[] = $i;
         }
-    }
 
-    /**
-     * Display the output to screen.
-     *
-     * @return string
-     */
-    public function displayOutput()
-    {
-        echo implode(" ", $this->output);
-        return;
+        // Return the output
+        return $this->output;
     }
 }

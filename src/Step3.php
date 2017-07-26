@@ -1,15 +1,8 @@
 <?php
 namespace FizzBuzz;
 
-class Step3
+class Step3 extends Step2
 {
-    /**
-     * Store output.
-     *
-     * @var string
-     */
-    public $output = [];
-
     /**
      * The total number of
      * 'fizz' occurrences.
@@ -49,62 +42,6 @@ class Step3
      * @var int
      */
     public $integerCount = 0;
-
-    /**
-     * Output 'fizz' for numbers that
-     * are multiples of 3.
-     *
-     * @param $integer
-     * @return string
-     */
-    public function outputFizzForMultiplesOf3($integer)
-    {
-        if ($integer % 3 === 0) {
-            return 'fizz';
-        }
-    }
-
-    /**
-     * Output 'buzz' for numbers that
-     * are multiples of 5.
-     *
-     * @param $integer
-     * @return string
-     */
-    public function outputBuzzForMultiplesOf5($integer)
-    {
-        if ($integer % 5 === 0) {
-            return 'buzz';
-        }
-    }
-
-    /**
-     * Output 'fizzbuzz' for numbers that
-     * are multiples of 15.
-     *
-     * @param $integer
-     * @return string
-     */
-    public function outputFizzBuzzForMultiplesOf15($integer)
-    {
-        if ($integer % 15 === 0) {
-            return 'fizzbuzz';
-        }
-    }
-
-    /**
-     * Output 'lucky' for numbers
-     * containing 3.
-     *
-     * @param $integer
-     * @return string
-     */
-    public function outputLuckyForNumbersContaining3($integer)
-    {
-        if (preg_match('/3/', $integer)) {
-            return 'lucky';
-        }
-    }
 
     /**
      * Generate the output for
@@ -150,6 +87,9 @@ class Step3
             $this->output[] = $i;
             $this->integerCount++; // Increment integer counter
         }
+
+        // Return the output
+        return $this->output;
     }
 
     /**
@@ -163,16 +103,5 @@ class Step3
         echo "fizzbuzz: {$this->fizzBuzzCount}<br>";
         echo "lucky: {$this->luckyCount}<br>";
         echo "integer: {$this->integerCount}<br>";
-    }
-
-    /**
-     * Display the output to screen.
-     *
-     * @return string
-     */
-    public function displayOutput()
-    {
-        echo implode(" ", $this->output);
-        return;
     }
 }
