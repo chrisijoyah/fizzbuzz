@@ -21,4 +21,22 @@ class Step3Test extends TestCase
         $this->assertSame($step3->integerCount, 10);
 
     }
+
+    /**
+     * Test to see if output matches expected results.
+     */
+    public function testOutputMatchesExample()
+    {
+        // Define expected results
+        $expectedResult = [1, 2, 'lucky', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz', 11, 'fizz', 'lucky', 14, 'fizzbuzz', 16, 17, 'fizz', 19, 'buzz'];
+
+        // Create new instance of Step 1
+        $step3 = new Step3;
+
+        //Initialize test data
+        $step3->generateOutput(1, 20);
+
+        // Test to see if expected results match the output.
+        $this->assertSame($expectedResult, $step3->output);
+    }
 }

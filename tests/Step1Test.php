@@ -52,4 +52,22 @@ class Step1Test extends TestCase
             }
         }
     }
+
+    /**
+     * Test to see if output matches expected results.
+     */
+    public function testOutputMatchesExample()
+    {
+        // Define expected results
+        $expectedResult = [1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz', 11, 'fizz', 13, 14, 'fizzbuzz', 16, 17, 'fizz', 19, 'buzz'];
+
+        // Create new instance of Step 1
+        $step1 = new Step1;
+
+        //Initialize test data
+        $step1->generateOutput(1, 20);
+
+        // Test to see if expected results match the output.
+        $this->assertSame($expectedResult, $step1->output);
+    }
 }
