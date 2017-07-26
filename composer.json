@@ -1,0 +1,24 @@
+{
+  "name": "chrisijoyah/fizzbuzz",
+  "description": "FizzBuzz technical solution.",
+  "authors": [
+    {
+      "name": "Chris Ijoyah",
+      "email": "chrisijoyah@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FizzBuzz\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "FizzBuzz\\": "tests"
+    }
+  },
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^6.2"
+  }
+}
